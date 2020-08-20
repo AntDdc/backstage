@@ -79,7 +79,7 @@
                 this.$router.push({
                     name:'login'
                 })
-                this.$message('退出成功')
+                this.$message('退出成功1')
             },
             handleOpen(key, keyPath) {
                 console.log(key, keyPath);
