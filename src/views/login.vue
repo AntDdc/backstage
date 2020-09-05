@@ -33,7 +33,6 @@ export default {
     },
   methods:{
     async _login () {
-        console.log(this.formData.username.length);
         if( this.formData.password.length < 1 || this.formData.username.length < 1 ) return this.$message.error('请输入账号或密码')
         var res = await login(this.formData)
         if(res.data.meta.status !== 200) return this.$message.error('账号或密码不正确')

@@ -49,7 +49,6 @@
 
             async powerList() {
                 let  res = await getPowerList('list')
-                console.log(res);
                 if(res.data.meta.status !==200) return this.$message.warn('获取列表失败')
                 this.tableData = res.data.data
             }

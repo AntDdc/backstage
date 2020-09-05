@@ -205,7 +205,6 @@
         methods:{
             async distributepower () {
                 let res = await distributeRole(this.currentId,{rid:this.rid})
-                // console.log(res,8888);
                 this.roleModel = false
             },
             async reviseRole (v) {
@@ -213,10 +212,8 @@
                 this.currentId = v.id
                 let res1 = await getRoleId(v.id)
                 this.rid = res1.data.data.rid
-                console.log(res1.data);
                 let res = await revisePower()
                 this.powerList = res.data.data
-                console.log(this.powerList,1111);
                 this.roleModel = true
             },
             async editData (ruleModify) {
@@ -284,7 +281,6 @@
                             this.$message.error('添加用户失败')
                         }
                     } else {
-                        console.log('error submit!!');
                         return false;
                     }
                 });

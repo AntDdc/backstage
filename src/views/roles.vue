@@ -126,7 +126,6 @@
                 let res = await revisePower()
                 if (res.data.meta.status !==200) return this.$message.warn('获取列表失败')
                 this.tableData = res.data.data
-                console.log(this.tableData,111);
             }
         },
         beforeMount() {

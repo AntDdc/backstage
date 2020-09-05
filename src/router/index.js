@@ -16,10 +16,6 @@ Vue.use(VueRouter)
     },
     {
       path:'/home',
-      redirect:'/users'
-    },
-    {
-      path:'/home',
       name:'home',
       component: () => import('../views/home.vue'),
       children:[
@@ -37,7 +33,27 @@ Vue.use(VueRouter)
           path:'/roles',
           name:'roles',
           component:() => import('../views/roles.vue')
-        }
+        },
+        {
+          path:'/goods',
+          name:'goods',
+          component:() => import('../views/goods.vue')
+        },
+        {
+          path:'/goods/add',
+          name:'addGoods',
+          component:() => import('../views/addGoods.vue')
+        },
+        {
+          path:'/params',
+          name:'params',
+          component:() => import('../views/params.vue')
+        },
+          {
+              path:'/orders',
+              name:'orders',
+              component:() => import('../views/orders.vue')
+          }
       ]
     },
   {
